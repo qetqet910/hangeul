@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'mu';
+    src: url(../font/나눔손글씨-무궁화.woff) format('woff');
+}
+
+@font-face{
+    font-family: 'am';
+    src: url(../font/나눔손글씨-암스테르담.woff) format('woff');
+}
+
+@font-face{
+    font-family: 'hl';
+    src: url(../font/나눔손글씨-할아버지의나눔.woff) format('woff');
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    .intro{
+        position: absolute;
+        left: 49%;
+        top: 49%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        z-index: 2;
+        span{
+            font-size: 200px;
+            line-height: 80px;
+            letter-spacing: -50px;
+            font-weight: bold;
+            pointer-events: none;
+            user-select: none;
+            color: var(--color);
+            text-shadow: 0px 0px 10px var(--color);
+            margin: 64px 22px;
+        }
+    }
+    lottie-player{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: .75;
+    }
+    h1{
+        font-size: 100px;
+        margin-top: 80px;
+    }
+    .blank{
+        min-height: 100vh;
+    }
+    #na{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        width: 100%;
+        margin-top: 120px;
+        z-index: 2;
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 80%;
+            width: 100%;
+            span{
+                font-size: 1.1vw;
+                font-weight: bold;
+                color: #555;
+                text-align: center;
+                a{
+                    color: #555;
+                }
+            }
+            span:nth-child(1){
+                text-align: left;
+            }
+            span:nth-child(2){
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            span:nth-child(3){
+                text-align: right;
+            }
+        }
+    }
+    .na2{
+        &::after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -18%;
+            width: 90%;
+            height: 3px;
+            background: linear-gradient(120deg, #3498db, #1abc9c);
+            transform: translateX(-50%);
+            border-radius: 50px;
+        }
+        padding-bottom: 100px;
+        .for{
+            all: unset;
+            position: absolute;
+            width: 100%;
+            bottom: 0% !important;
+            z-index: -2;
+        }
+    }
+    .na2 div span{
+        font-size: 2.3vw !important;
+    }
+    .na2 div span:nth-child(1){font-family: 'mu';}
+    .na2 div span:nth-child(2){font-family: 'am';}
+    .na2 div span:nth-child(3){font-family: 'hl';}
+    .na2 div span a{
+        transition: all .25s;
+    }
+    .na2 div span a:hover{
+        color: white !important;
+        text-shadow: 0px 0px 10px #333, 0px 0px 10px #333;
+    }
+    .arrow{
+        position: absolute;
+        left: 50%;
+        top: 82%;
+        transform: translateX(-50%);
+    }
+}

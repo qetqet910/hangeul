@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "mu";
+  src: url(../font/나눔손글씨-무궁화.woff) format("woff");
+}
+@font-face {
+  font-family: "am";
+  src: url(../font/나눔손글씨-암스테르담.woff) format("woff");
+}
+@font-face {
+  font-family: "hl";
+  src: url(../font/나눔손글씨-할아버지의나눔.woff) format("woff");
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body .intro {
+  position: absolute;
+  left: 49%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  z-index: 2;
+}
+body .intro span {
+  font-size: 200px;
+  line-height: 80px;
+  letter-spacing: -50px;
+  font-weight: bold;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: var(--color);
+  text-shadow: 0px 0px 10px var(--color);
+  margin: 64px 22px;
+}
+body lottie-player {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0.75;
+}
+body h1 {
+  font-size: 100px;
+  margin-top: 80px;
+}
+body .blank {
+  min-height: 100vh;
+}
+body #na {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  width: 100%;
+  margin-top: 120px;
+  z-index: 2;
+}
+body #na div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  width: 100%;
+}
+body #na div span {
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+body #na div span a {
+  color: #555;
+}
+body #na div span:nth-child(1) {
+  text-align: left;
+}
+body #na div span:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body #na div span:nth-child(3) {
+  text-align: right;
+}
+body .na2 {
+  padding-bottom: 100px;
+}
+body .na2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -18%;
+  width: 90%;
+  height: 3px;
+  background: linear-gradient(120deg, #3498db, #1abc9c);
+  transform: translateX(-50%);
+  border-radius: 50px;
+}
+body .na2 .for {
+  all: unset;
+  position: absolute;
+  width: 100%;
+  bottom: 0% !important;
+  z-index: -2;
+}
+body .na2 div span {
+  font-size: 2.3vw !important;
+}
+body .na2 div span:nth-child(1) {
+  font-family: "mu";
+}
+body .na2 div span:nth-child(2) {
+  font-family: "am";
+}
+body .na2 div span:nth-child(3) {
+  font-family: "hl";
+}
+body .na2 div span a {
+  transition: all 0.25s;
+}
+body .na2 div span a:hover {
+  color: white !important;
+  text-shadow: 0px 0px 10px #333, 0px 0px 10px #333;
+}
+body .arrow {
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=style.css.map */
